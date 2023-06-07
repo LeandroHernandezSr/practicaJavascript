@@ -1,7 +1,38 @@
-window.addEventListener('DOMContentLoaded', mouse);
-
-
 //Eventos LOAD y DOMContentLoaded
+
+/*document.addEventListener('DOMContentLoaded', function () {
+    //Evento MouseOver y MouseOut
+
+    document.getElementById('recuadro1').addEventListener('mouseover', entrada);
+    document.getElementById('recuadro1').addEventListener('mouseout', salida);
+
+    function entrada() {
+        document.getElementById('recuadro1').style.borderRadius = '30px';
+    }
+
+    function salida() {
+        document.getElementById('recuadro1').style.borderRadius = '0px';
+    }
+});
+*/
+
+
+//window.addEventListener('DOMContentLoaded', mouse);
+
+//Evento de Mousemove
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('recuadro1').addEventListener('mousemove', mover);
+
+    function mover() {
+        let x = parseInt(document.getElementById('cantidad').innerHTML);
+        x++;
+        document.getElementById('cantidad').innerHTML = x;
+    }
+});
+
+
+
 function inicio() {
     document.getElementById("formulario1").addEventListener('submit', validar);
 }
@@ -60,3 +91,5 @@ function entrada() {
 function salida() {
     document.getElementById('recuadro1').style.borderRadius = '0px';
 }
+
+
