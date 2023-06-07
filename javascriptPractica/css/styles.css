@@ -10,8 +10,8 @@ body{
 
 .evento1{
     border: 1px solid black;
-    width: 20%;
-    height: 20%;
+    width:200px;
+    height: 200px;
     background-color: rebeccapurple;
     text-align: center;
     font-size: 1rem;

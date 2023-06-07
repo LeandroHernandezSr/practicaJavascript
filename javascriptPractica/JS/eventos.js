@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', inicio);
+window.addEventListener('DOMContentLoaded', mouse);
 
 
 //Eventos LOAD y DOMContentLoaded
@@ -30,5 +30,18 @@ function dbclick(){
     alert('Le diste doble click');
 }
 
+//Evento MouseUp y MouseDown
 
+function mouse(){
+    document.getElementById('mouseUp-down').addEventListener('mouseup',mouseUp);
+    document.getElementById('mouseUp-down').addEventListener('mousedown',mouseDown);
+}
+
+function mouseUp(){
+    document.getElementById('mouseUp-down').innerHTML="Estas presionando el mouse";
+}
+
+function mouseDown(){
+    document.getElementById('mouseUp-down').innerHTML="Dejaste de presionar el mouse";
+}
 
