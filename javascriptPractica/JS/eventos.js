@@ -17,31 +17,46 @@ function validar(evt) {
 
 //Eventos Click y DbClick
 
-function inicio(){
-    document.getElementById('click').addEventListener('click',click);
-    document.getElementById('dobleClick').addEventListener('dblclick',dbclick);
+function inicio() {
+    document.getElementById('click').addEventListener('click', click);
+    document.getElementById('dobleClick').addEventListener('dblclick', dbclick);
 }
 
-function click(){
+function click() {
     alert('Le diste click');
 }
 
-function dbclick(){
+function dbclick() {
     alert('Le diste doble click');
 }
 
 //Evento MouseUp y MouseDown
 
-function mouse(){
-    document.getElementById('mouseUp-down').addEventListener('mouseup',mouseUp);
-    document.getElementById('mouseUp-down').addEventListener('mousedown',mouseDown);
+function mouse() {
+    document.getElementById('mouseUp-down').addEventListener('mouseup', mouseUp);
+    document.getElementById('mouseUp-down').addEventListener('mousedown', mouseDown);
 }
 
-function mouseUp(){
-    document.getElementById('mouseUp-down').innerHTML="Estas presionando el mouse";
+
+function mouseUp() {
+    //.InnerHTML modifica el contenido
+    document.getElementById('mouseUp-down').innerHTML = "Estas presionando el mouse";
 }
 
-function mouseDown(){
-    document.getElementById('mouseUp-down').innerHTML="Dejaste de presionar el mouse";
+function mouseDown() {
+    //.InnerHTML modifica el contenido
+    document.getElementById('mouseUp-down').innerHTML = "Dejaste de presionar el mouse";
 }
 
+//Evento MouseOver y MouseOut
+
+document.getElementById('recuadro1').addEventListener('mouseover', entrada);
+document.getElementById('recuadro1').addEventListener('mouseout', salida);
+
+function entrada() {
+    document.getElementById('recuadro1').style.borderRadius = '30px';
+}
+
+function salida() {
+    document.getElementById('recuadro1').style.borderRadius = '0px';
+}
