@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 10rem;
+}
+
+.evento1{
+    border: 1px solid black;
+    width: 20%;
+    height: 20%;
+    background-color: rebeccapurple;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.evento2{
+    border: 1px solid black;
+    width: 20%;
+    height: 20%;
+    background-color: turquoise;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
