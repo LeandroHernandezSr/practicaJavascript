@@ -1,0 +1,50 @@
+:root{
+    --fuente:'Orbitron', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/javascriptPractica/img/download\ next\ wallpaper\ prev\ wallpaper.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor{
+    width: 16rem;
+    margin: 10rem auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 1px 10px 2px black;
+    padding: 10px;
+    font-family: var(--fuente);
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.formulario [type='text']{
+    width: 100%;
+}
+
+input[type='submit']{
+    font-family: var(--fuente);
+    padding: 10px;
+    background-color:steelblue;
+    border: none;
+    box-shadow: 1px 1px 5px 2px steelblue;
+}
+
+input[type='submit']:hover{
+    transition-duration: 2s;
+    background-color:greenyellow;
+    box-shadow: 1px 1px 5px 2px green;
+}
