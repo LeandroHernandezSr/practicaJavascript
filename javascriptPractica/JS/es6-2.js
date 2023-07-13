@@ -51,41 +51,48 @@ document.addEventListener("DOMContentLoaded", function () {
   menu.insertarEnlace("https://www.example.com", "Enlace de ejemplo");
   menu.mostrar("menuid");
 });
-
-//Herencia
+//Clases con herencia, con metodos getter y setter
 class Persona {
-  constructor(nombre, edad) {
+  constructor(nombre, apellido) {
     this.nombre = nombre;
-    this.edad = edad;
+    this.apellido = apellido;
   }
 
-  imprimir() {
-    document.write(`Nombre: ${this.nombre}`);
-    document.write(`Edad: ${this.edad}`);
-  }
-}
-
-class Empleado extends Persona {
-  constructor(nombre, edad, sueldo) {
-    super(nombre, edad);
-    this.sueldo = sueldo;
+  set Nombre(nombre) {
+    this.nombre = nombre;
   }
 
-  imprimir() {
-    super.imprimir();
-    document.write(`Sueldo: ${this.sueldo}<br>`);
+  get Nombre() {
+    return this.nombre;
   }
 
-  pagarImpuestos() {
-    if (this.sueldo > 5000) {
-      document.write(`${this.nombre} debe pagar impuestos <br>`);
-    } else {
-      document.write(`${this.nombre} no debe pagar impuestos <br>`);
-    }
+  set Apellido(apellido) {
+    this.apellido = apellido;
+  }
+
+  get Apellido() {
+    return this.apellido;
   }
 }
 
-const empleado1=new Empleado('Leandro','24','6000');
-empleado1.pagarImpuestos();
+class Doctor extends Persona {
+  
+  constructor(nombre, apellido, matricula) {
+    super(nombre,apellido);
+    this.matricula = matricula;
+  }
 
+  set Matricula(matricula){
+    this.matricula=matricula;
+  }
 
+  get Matricula(){
+    return this.matricula;
+  }
+
+}
+
+let doctor=new Doctor("Leandro","Hernandez","4859a");
+doctor.nombre="Kirstin";
+doctor.apellido="Rivero";
+alert(doctor.nombre);
